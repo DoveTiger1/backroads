@@ -1,0 +1,36 @@
+function Tour({
+  id,
+  tourImg,
+  tourDate,
+  tourTitle,
+  tourText,
+  location,
+  duration,
+  cost,
+}) {
+  return (
+    <article className='tour-card'>
+      <div className='tour-img-container'>
+        <img src={tourImg} className='tour-img' alt='' />
+        <p className='tour-date'>{tourDate}</p>
+      </div>
+      <div className='tour-info'>
+        <div className='tour-title'>
+          <h4>{tourTitle}</h4>
+        </div>
+        <p>{tourText}</p>
+        <div className='tour-footer'>
+          <p>
+            <span>
+              <i className='fas fa-map'></i>
+            </span>{' '}
+            {location}
+          </p>
+          <p>{duration} days</p>
+          <p>from ${cost}</p>
+        </div>
+      </div>
+    </article>
+  );
+}
+export default Tour;
